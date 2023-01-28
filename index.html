@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>TIC<span>-TAC-</span>TOE</h1>
+        </div>
+        <div class="tile">
+            <div class="tile-slide">
+                <div class="choose-tile-container">
+                    <h2>Choose your tile</h2>
+                    <div class="buttons">
+                        <button onclick="chooseTile(0)"><img src="./images/cross.png" alt=""></button>
+                        <button onclick="chooseTile(1)"><img src="./images/circle.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="choosed-tile-container">
+                    <p>you are playing </p>
+                    <div class="image">
+                        <img id="choosed-tile" src="" alt="">
+                    </div>
+                </div>   
+            </div>
+        </div>
+        <div class="board-container">
+            <div onclick="Play(1)" class="cell top left"><img src="" alt=""></div>
+            <div onclick="Play(2)" class="cell top center"><img src="" alt=""></div>
+            <div onclick="Play(3)" class="cell top right"><img src="" alt=""></div>
+            <div onclick="Play(4)" class="cell middle left"><img src="" alt=""></div>
+            <div onclick="Play(5)" class="cell middle center"><img src="" alt=""></div>
+            <div onclick="Play(6)" class="cell middle right"><img src="" alt=""></div>
+            <div onclick="Play(7)" class="cell bottom left"><img src="" alt=""></div>
+            <div onclick="Play(8)" class="cell bottom center"><img src="" alt=""></div>
+            <div onclick="Play(9)" class="cell bottom right"><img src="" alt=""></div>
+        </div>
+        <div class="play">
+            <div class="slide disabled">
+                <div class="button-container ">
+                    <button onclick="startGame()">
+                        <p>START</p>
+                    </button>
+                </div>
+                <div class="score-container">
+                    <div class="turn">
+                        <p></p>
+                    </div>
+                    <div class="score">
+                        <div class="player-container">
+                            <p>YOU</p>
+                            <div class="player-score">
+                                <p>0</p>
+                            </div>
+                        </div>
+                        <div class="machine-container">
+                            <p>MACHINE</p>
+                            <div class="machine-score">
+                                <p>0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gameover-container">
+        <div class="container">
+            <div class="winner">
+                <p></p>
+            </div>
+            <div class="score">
+                <div class="player-score">
+                    <p>1</p>
+                </div>
+                <p>X</p>
+                <div class="machine-score">
+                    <p>2</p>
+                </div>
+            </div>
+            <div class="buttons">
+                <button onclick="PlayAgain()">Play again</button>
+                <button onclick="Restart()">Restart</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
